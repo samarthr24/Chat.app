@@ -1,0 +1,27 @@
+<!-- <div class="chat-container">
+  <input type="text" [(ngModel)]="user" placeholder="Enter your name" />
+  <div class="messages">
+    <div *ngFor="let msg of messages">
+      <strong>{{ msg.user }}:</strong> {{ msg.message }}
+    </div>
+  </div>
+  <input type="text" [(ngModel)]="message" placeholder="Enter message" />
+  <button (click)="sendMessage()">Send</button>
+</div> -->
+
+
+
+<div>
+  <h3>Public Chat</h3>
+  <div *ngFor="let msg of messages"><strong>{{ msg.user }}:</strong> {{ msg.message }}</div>
+  <input [(ngModel)]="message" placeholder="Type a message">
+  <button (click)="sendMessage()">Send</button>
+</div>
+
+<div>
+  <h3>Private Chat</h3>
+  <div *ngFor="let msg of privateMessages">{{ msg }}</div>
+  <input [(ngModel)]="privateReceiver" placeholder="Recipient's username">
+  <input [(ngModel)]="message" placeholder="Type a private message">
+  <button (click)="sendPrivateMessage()">Send Private</button>
+</div>
